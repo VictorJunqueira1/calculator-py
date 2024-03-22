@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body>
+    <h2>Calculadora Simples</h2>
+    <form method="post">
+        <input type="number" name="num1" placeholder="Primeiro Número" required="required" /> 
+        <input type="number" name="num2" placeholder="Segundo Número" required="required" />
+        <select name="operacao">
+            <option value="adicionar">Adicionar</option>
+            <option value="subtrair">Subtrair</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if resultado is not none %}
+    <h3>Resultado: {{ resultado }}</h3>
+    {% endif %}
+</body>
+</html>
