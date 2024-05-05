@@ -2,8 +2,6 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-
-
 # Calculadora
 def adicionar(x, y):
     return x + y
@@ -40,4 +38,4 @@ def calculadora():
     return render_template('index.html', resultado=resultado)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
